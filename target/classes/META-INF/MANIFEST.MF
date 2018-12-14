@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: pirestservice
+Implementation-Version: 1.0.0
+Built-By: Mike
+Specification-Vendor: Mike McMahon
+Specification-Title: pirestservice
+Implementation-Vendor-Id: ca.thirdgear
+Build-Jdk: 1.8.0_181
+Specification-Version: 1.0.0
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Mike McMahon
+

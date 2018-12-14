@@ -1,0 +1,44 @@
+healthCheck: healthy %s
+
+defaultName: HomeAutomation
+
+#Database settings
+database:
+
+  #JDBC driver
+  driverClass: com.mysql.jdbc.Driver
+  
+  #username
+  user: root
+  
+  #password
+  password: time12trial
+  
+  #JDBC URL
+  url: jdbc:mysql://172.16.2.11:3306/HomeAutomation?autoReconnect=true&useSSL=false
+
+#Server settings
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+    
+  adminConnectors: 
+    - type: http
+      port: 8081
+      
+#Logging
+logging:
+
+  appenders:
+    - type: console
+    - type: file
+      threshold: ALL
+      logFormat: "%-6level [%d{HH:mm:ss.SSS}] [%t] %logger{5} - %X{code} %msg %n"
+      currentLogFilename: /usr/local/piservice/logfiles/application.log
+      archivedLogFilenamePattern: /usr/local/piservice/logfiles/application-%d{yyyy-MM-dd}-%i.log.gz
+      archivedFileCount: 7
+      timeZone: UTC
+      maxFileSize: 10MB
+
+ 
